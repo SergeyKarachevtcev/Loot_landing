@@ -1,0 +1,152 @@
+.main_title {
+	color: $gold;
+	font-size: 36px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+	font-family: $font-title;
+	margin-bottom: 88px;
+}
+
+.appart_wrapper {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 30px;
+	position: relative;
+	&::after {
+		z-index: -1;
+		content: "";
+		background-image: url(../img/bg-elements/III.png);
+		background-repeat: no-repeat;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: -8%;
+		left: -20%;
+	}
+}
+
+.appart_card {
+	display: block;
+	position: relative;
+	width: 540px;
+	height: 320px;
+	overflow: hidden;
+	&:hover::after {
+		opacity: 1;
+	}
+	&::before {
+		z-index: 7;
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(180deg, rgba(36, 43, 51, 0) 0%, #242b33 100%);
+	}
+	&::after {
+		z-index: 8;
+		opacity: 0;
+		content: "";
+		position: absolute;
+		top: 15px;
+		left: 15px;
+		right: 15px;
+		bottom: 15px;
+		border: 3px double #b8b8b8;
+		transition: 0.3s;
+	}
+}
+
+.appart_card_text {
+	position: absolute;
+	z-index: 9;
+	top: 250px;
+	left: 50px;
+	font-family: $font-text;
+	font-size: 36px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+}
+
+.card_img {
+	transition: transform 0.3s ease-in;
+}
+
+.appart_card:hover .card_img {
+	transform: scale(1.1);
+}
+
+
+//media-mobile
+
+@media (max-width: 1200px) {
+
+}
+
+@media (max-width: 1199px) {
+	.main_title{
+		text-align: center;
+	}
+	.appart_wrapper{
+		display: flex;
+		flex-wrap: wrap;
+		gap: 70px;
+		justify-content: center;
+	}
+	.appart_card_text{
+		font-size: 25px;
+	}
+}
+
+@media (max-width: 991px) {
+
+}
+
+@media (max-width: 767px) {
+	.appart_card{
+		width: 390px;
+		height: 240px;
+	}
+		.appart_card_text{
+		font-size: 25px;
+		top: 170px;
+		left: 30px;
+	}
+}
+
+@media (max-width: 575px) {
+		.main_title{
+		font-size: 24px;
+		margin-bottom: 30px;
+	}
+
+		.appart_card{
+		width: 270px;
+		height: 165px;
+	}
+		.appart_card_text{
+		font-size: 15px;
+		top: 120px;
+		left: 30px;
+	}
+}
+
+@media (max-width: 320px) {
+	.main_title{
+		font-size: 24px;
+	}
+
+			.appart_card{
+		width: 180px;
+		height: 108px;
+	}
+		.appart_card_text{
+		font-size: 12px;
+		top: 80px;
+		left: 15px;
+	}
+
+}

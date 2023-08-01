@@ -1,0 +1,62 @@
+//reset
+@import "../scss/reset";
+
+//fonts
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway:wght@400;700&family=Roboto:wght@300&display=swap");
+
+//fonts-list
+$font-main: Raleway;
+$font-title: Playfair Display;
+$font-text: Roboto;
+
+//colors
+$dark: #242b33;
+$gold: #d4c17f;
+$white: #fff;
+
+//body
+
+body {
+	font-family: $font-main;
+	font-size: 16px;
+	color: $white;
+    display: flex;
+    flex-direction: column;
+    background-color: $dark;
+}
+
+a {
+	color: $white;
+}
+
+//conteiner
+.conteiner{
+    margin: 0 auto;
+    padding: 0 30px;
+    max-width: 1140px;
+    /* background-color: rgb(240, 127, 127); */
+}
+//header
+@import "../scss/header";
+
+//advantages
+
+@import '../scss/advantages.scss';
+
+//appartsment
+@import '../scss/apparts.scss';
+
+//form_section
+@import '../scss/form_section.scss';
+
+//video_section
+@import '../scss/video_section.scss';
+
+//map_section
+@import '../scss/map_section.scss';
+
+//feedback_section
+@import '../scss/feedback_section.scss';
+
+//footer
+@import '../scss/footer.scss';

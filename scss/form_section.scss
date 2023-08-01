@@ -1,0 +1,139 @@
+.form_section {
+	min-height: 560px;
+	padding-top: 180px;
+	padding-bottom: 180px;
+	background: linear-gradient(180deg, #242b33 10.42%, rgba(36, 43, 51, 0) 50.52%, #242b33 90.1%), linear-gradient(0deg, rgba(36, 43, 51, 0.9) 0%, rgba(36, 43, 51, 0.9) 100%),
+		url(../img/form-block/form-bg.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.form_title {
+	color: $gold;
+	margin-bottom: 17px;
+	font-size: 36px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+}
+
+.form_wrapper {
+	display: flex;
+	justify-content: space-between;
+	gap: 30px;
+}
+
+.form_left_wrap {
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 24px;
+}
+
+.form {
+	display: grid;
+	grid-template-columns: 255px 255px;
+	gap: 30px;
+}
+.form_text {
+	color: #e7e7e7;
+	text-align: center;
+	font-family: Raleway;
+	font-size: 13px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 16px;
+}
+
+.form_input {
+	padding: 12px;
+	height: 50px;
+	text-align: center;
+	color: $white;
+	background: rgba(255, 255, 255, 0.2);
+	font-family: Raleway;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 27px;
+	transition: all 0.2s ease-in;
+	&:focus {
+		background: rgba(255, 255, 255, 0.8);
+	}
+}
+
+.form_button {
+	height: 50px;
+	background-color: $gold;
+	color: #fff;
+	text-align: center;
+	font-family: Raleway;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 27px;
+	transition: all 0.3s ease-in;
+	&:hover {
+		filter: saturate(1.8);
+	}
+}
+
+
+//media-mobile
+
+@media (max-width: 1200px) {
+}
+
+@media (max-width: 1199px) {
+	.form_title{
+		text-align: center;
+	}
+	.form_wrapper{
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	.form_left_wrap{
+		width: 540px;
+		text-align: center;
+	}
+}
+
+@media (max-width: 991px) {
+}
+
+@media (max-width: 767px) {
+}
+
+@media (max-width: 575px) {
+	.form{
+		grid-template-columns: 1fr;
+	}
+	.form_text{
+		grid-row: 4/5;
+	}
+		.form_section{
+		padding-top: 100px;
+		padding-bottom: 100px;
+	}
+		.form_left_wrap{
+		p{
+			font-size: 13px;
+		}
+	}
+}
+
+
+@media (max-width: 320px) {
+	.form_title{
+		font-size: 24px;
+	}
+	.form_left_wrap{
+		p{
+			font-size: 13px;
+		}
+	}
+			.form_section{
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+}
